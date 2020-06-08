@@ -2,6 +2,12 @@ const express = require("express");
 const router = express.Router();
 const nodeHtmlToImage = require("node-html-to-image");
 
+// @route   GET
+// @desc    Health check
+router.get("/", (req, res) => {
+  res.status(200).json("It works");
+});
+
 // @route   POST
 // @body    {html: string}
 // @desc    Generate image for given payload
